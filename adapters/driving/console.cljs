@@ -5,8 +5,9 @@
             ))
 
 
-(def resp (movie/list-movies movie-service/get-from-file))
+(def resp (movie/get-movie 4 movie-service/get-from-file))
 
 
 (defn -main []
-  (js/console.log resp))
+    (println (movie/list-movies movie-service/get-from-file))
+    (println resp))

@@ -6,4 +6,4 @@
 
 (defn get-from-file []
     (let [data (js/JSON.parse (fs/readFileSync "data.json"))]
-        data.movies))
+        (js->clj data.movies :keywordize-keys true)))
